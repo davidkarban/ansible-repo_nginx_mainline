@@ -6,9 +6,9 @@ Nginx mainline repository for RHEL family.
 Example Playbook
 ----------------
 
-  - hosts: nginx
-    roles:
-      - nginx_mainline
+    - hosts: nginx
+      roles:
+        - nginx_mainline
 License
 -------
 
