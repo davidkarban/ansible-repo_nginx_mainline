@@ -6,3 +6,15 @@
     - nginx_mainline
   copy: src=nginx_mainline.repo dest=/etc/yum.repos.d/
 
+- name: Import nginx repository key
+  apt_key:
+    url: "http://nginx.org/keys/nginx_signing.key"
+    state: present
+  when: ansible_os_family == 'Debian'
+
+- name: Install nginx mainline apt repository
+  apt_repository:
+    repo: "deb http://nginx.org/packages/mainline/{{ ansible_distribution|lower() }}/ {{ ansible_lsb.codename }} nginx"
+    update_cache: true
+    state: present
+  when: ansible_os_family == 'Debian'

@@ -1,7 +1,7 @@
 Role Name
 =========
 
-Nginx mainline repository for RHEL family.
+Nginx mainline repository for RHEL and Debian families.
 
 Example Playbook
 ----------------
