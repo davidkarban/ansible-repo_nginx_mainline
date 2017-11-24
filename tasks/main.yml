@@ -1,0 +1,8 @@
+---
+# tasks file for nginx_mainline
+- name: Ensure nginx mainline repo is available
+  tags: 
+    - nginx
+    - nginx_mainline
+  copy: src=nginx_mainline.repo dest=/etc/yum.repos.d/
+
