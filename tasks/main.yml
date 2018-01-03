@@ -5,6 +5,7 @@
     - nginx
     - nginx_mainline
   copy: src=nginx_mainline.repo dest=/etc/yum.repos.d/
+  when: ansible_os_family == 'RedHat'
 
 - name: Import nginx repository key
   apt_key:
